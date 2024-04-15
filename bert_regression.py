@@ -16,9 +16,9 @@ def remove_links(review):
 # df['Text'] = df['Text'].apply(remove_links)
 
 model = AutoModelForSequenceClassification.from_pretrained(
-  'topic_magnet/bert_regr_other_pretrained', num_labels = 1)
+  '../topic_magnet/bert_regr_other_pretrained', num_labels = 1)
 tokenizer = AutoTokenizer.from_pretrained(
-  'topic_magnet/bert_regr_other_pretrained')
+  '../topic_magnet/bert_regr_other_pretrained')
 
 def preprocess_function_regr(examples):
     return tokenizer(examples["Text"], truncation=True, max_length=64, padding = 'max_length')

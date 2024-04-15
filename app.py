@@ -17,7 +17,7 @@ os.environ["OPENAI_API_KEY"] = "sk-8ZjErQygFtMSvbTR8sb4T3BlbkFJjE6dOZbvchsuZ5esh
 
 app = Flask(__name__)
 
-nlp = spacy.load('topic_magnet/spacy_model')
+nlp = spacy.load('../topic_magnet/spacy_model')
 sentiment_pipeline = pipeline("sentiment-analysis", model='my_sentiment_model')
 classifier = pipeline(task="zero-shot-classification", model="my_zero_shot")
 

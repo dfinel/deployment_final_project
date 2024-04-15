@@ -80,7 +80,7 @@ def compute_metrics_for_regression(eval_pred):
 
 from transformers import TrainingArguments
 
-output_dir = "."
+output_dir = ".."
 
 training_args = TrainingArguments(
     output_dir = output_dir,
